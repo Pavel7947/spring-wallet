@@ -1,11 +1,18 @@
 spring:
-  application:
-    name: wallet-service
-  config:
-    import: configserver:http://localhost:8888
   cloud:
     config:
-      fail-fast: true
-      retry:
-        useRandomPolicy: true
-        max-interval: 6000
+      enabled:
+          false
+  datasource:
+    url: jdbc:h2:mem:spring-wallet
+    username: spring-wallet
+    driver-class-name: org.h2.Driver
+    password: password
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      ddl-auto: none

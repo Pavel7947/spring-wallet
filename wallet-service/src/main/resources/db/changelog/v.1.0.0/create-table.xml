@@ -6,7 +6,7 @@
 
     <changeSet id="create-table-wallet" author="Pavel7947">
         <createTable tableName="wallets">
-            <column name="id" type="UUID" defaultValueComputed="gen_random_uuid()">
+            <column name="id" type="UUID">
                 <constraints nullable="false" primaryKey="true"/>
             </column>
             <column name="amount" type="BIGINT"/>
