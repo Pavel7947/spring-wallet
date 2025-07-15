@@ -1,0 +1,13 @@
+server:
+  port:
+    8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Pavel7947/spring-wallet-config
+          default-label: master
+          search-paths: "{application}"
