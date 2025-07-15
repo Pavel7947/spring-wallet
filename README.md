@@ -11,5 +11,5 @@
 5. Liquibase
 6. Docker 
 
-Тестировал в Jmeter с 7000 threads на один кошелек с Rump-up 7c. Из низ 6000 модификация кошелька. Файл jmx в корне проекта [PlainHttp1000RPS.jmx](PlainHttp1000RPS.jmx)  
+Тестировал в Jmeter с 7000 threads на один кошелек с Rump-up 7c. Из низ 6000 модификация кошелька. Файл jmx в корне проекта [PlainHttp1000RPS.jmx](PlainHttp1000RPS.jmx).  
 p.s решение честное
