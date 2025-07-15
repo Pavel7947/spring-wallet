@@ -24,7 +24,7 @@ public class WalletController {
     }
 
     @GetMapping("/wallets/{wallet_UUID}")
-    public WalletDto getAmount(@PathVariable UUID walletUUID) {
+    public WalletDto getAmount(@PathVariable(name = "wallet_UUID") UUID walletUUID) {
         log.info("Поступил запрос на получение баланса счета с UUID: {}", walletUUID);
         return walletService.getAmount(walletUUID);
     }

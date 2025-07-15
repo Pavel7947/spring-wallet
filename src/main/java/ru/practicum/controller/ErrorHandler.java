@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import ru.practicum.dto.ErrorResponse;
-import ru.practicum.exceptions.BadRequestException;
+import ru.practicum.exceptions.LowBalanceException;
 import ru.practicum.exceptions.NotFoundException;
 
 @RestControllerAdvice
@@ -20,9 +20,9 @@ public class ErrorHandler {
         return new ErrorResponse(e.getMessage());
     }
 
-    @ExceptionHandler(BadRequestException.class)
+    @ExceptionHandler(LowBalanceException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ErrorResponse handleBadRequest(Exception e) {
+    public ErrorResponse handleLowBalance(LowBalanceException e) {
         log.debug("Получен статус 400 BAD_REQUEST {}", e.getMessage(), e);
         return new ErrorResponse(e.getMessage());
     }
